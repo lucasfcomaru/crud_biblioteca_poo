@@ -10,7 +10,6 @@ while True:
     print("1 - Cadastrar livro")
     print("2 - Consultar livros")
     print("3 - Remover livro")
-    print("4 - Emprestar livro")
     print("0 - Sair")
 
     opcao_menu = input("escolha uma opção: ")
@@ -100,13 +99,12 @@ while True:
                     print("Digite um número válido")
                     continue
         case "3":
-            continue
-        case "4":
+            escolher_indice = int(input("Escolha o índice do livro que deseja excluir: "))
+            livro.remove_livro(biblioteca, escolher_indice)
             continue
         case "0":
             print("Encerrando o programa...")
             break
-
         case _:
             print("Por favor, escolha uma opção do menu.")
 
